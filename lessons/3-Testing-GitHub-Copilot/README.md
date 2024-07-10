@@ -67,3 +67,20 @@ Highlight the method
 
 
 # Challenge: Add Unit Tests to your Todo Application
+
+It's time for another challenge! You added features to your Todo application, but now we need to test them to make sure they work! Let's take what we've learnt in this lesson to do that!
+
+Again, you have free reign to implement tests for your application the way you want to. You don't have to use xUnit, you don't even have to write tests for just C#, feel free to add some for the front-end too!
+
+Here's some pointers for inspiration:
+
+- How do we know that our endpoints behave as expected? We could use some tests for that.
+- The front-end needs some attention too! If you're not an expert in React, we can use GitHub Copilot to explain how the front-end works, and how we can test it!
+- What edge cases can you think of? Can Copilot help here?
+- How do we run the tests?
+
+Grab a friend, join a team or a group, and start thinking about how you can use Copilot to help accelerate the process of testing your Todo application!
+
+**WANT TO WIN SOME SWAG?!**
+
+- First team to demo their solution gets a prize!

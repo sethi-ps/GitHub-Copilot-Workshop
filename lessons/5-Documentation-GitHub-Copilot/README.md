@@ -73,3 +73,19 @@ When reviewing the output, consider the following:
 - Add additional information or context to the generated output to provide more comprehensive documentation.
 
 # Challenge: Document your Todo application using GitHub Copilot
+
+One of the most important factors of software development is being able to inform users of your software how to use it. So that super-shiny todo app that you've been building throughout the day - It's time to document it!
+
+Good thing you have Copilot to help you!
+
+How you document is up to you! Here are some suggestions to get you started:
+
+- That `README.md` file is looking pretty thin ☹️ How do we start the application? Do I need anything installed on my machine to run it? It'd be great if that detail was in there...
+- How readable is your code? Could it benefit from some inline comments? 
+
+Split up into pairs, grab a group together, come up with some ideas, and craft away!
+
+**Want to win some SWAG?!!!!**
+
+- First pair/team/group to demo their work gets a prize!
+- First team to provide documentation that another team can use to start that project gets a prize!
