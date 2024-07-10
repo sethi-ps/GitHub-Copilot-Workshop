@@ -63,8 +63,51 @@ In my case, GitHub Copilot Chat only generated unit tests for my `IsPrime()` met
 
 Open the `Calculator.cs` file and select a method that you want to generate unit tests for. I'm going to use the `Add()` method.
 
-Highlight the method 
+Highlight the method and open an inline chat session. Let's try to generate some unit tests for our `Add()` method with the following prompt:
 
+```
+Create some unit tests for this method using the xUnit framework
+```
+
+*Notice that I specified the testing framework that we're using? What happens when we remove this? Is the response from GitHub Copilot consistent? Or do we get random responses?*
+
+Review the output from GitHub Copilot - What else can we do to improve the output? Let's say we're using the **Arrange, Act, and Assert** pattern in our unit tests, but Copilot hasn't generated code that follows this pattern, we can refine our prompt to generate unit tests that do follow this pattern. Here's an example:
+
+```
+Create some unit tests for this method using the xUnit framework that follow the Arrange, Act, and Assert Pattern
+```
+
+Now that we've created unit tests using the Chat view and inline chat, let's dive a bit deeper.
+
+One of the advantages of using GitHub Copilot is that it can generate unit tests that test for edge cases. What are some of the common edge cases that you deal with? Some could include:
+
+- File types (anyone ever used a .dat file before?)
+- File size
+- Race conditions
+
+Let's take our `isPrime` method as an example. Let's ask Copilot if there are any edge cases we should be test for. Select the contents of the `CalculatorTests.cs` file, open up the Chat view and ask the following:
+
+```
+@workspace #selection are there any edge cases that should also be tested
+```
+
+This is the output that I got:
+
+![](./media/image3.png)
+
+As part of the output, GitHub Copilot will provide some unit tests based on its recommendations. So in my response, I received the following:
+
+```csharp
+[Fact]
+public void IsPrime_VeryLargePrimeNumber_ReturnsTrue()
+{
+    // This is the largest prime number less than int.MaxValue
+    var result = _calculator.IsPrime(2147483647);
+    Assert.True(result);
+}
+```
+
+Experiment with the prompts and review your outputs. What other edge cases can you think of? Use your knowledge to refine your prompts, and let GitHub Copilot do the grunt work of writing your tests for you!
 
 # Challenge: Add Unit Tests to your Todo Application
 
