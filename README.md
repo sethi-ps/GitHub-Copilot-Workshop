@@ -5,6 +5,7 @@ Repository containing materials for GitHub Copilot Workshop engagements
 
 Please ensure that you have the following tools installed on your workstation before the workshop:
 
+- Visual Studio Code
 - .NET 8
 - Node.js
 - Git
