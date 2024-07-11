@@ -9,6 +9,7 @@ Please ensure that you have the following tools installed on your workstation be
 - .NET 8
 - Node.js
 - Git
+- GitHub Copilot and GitHub Copilot Chat extensions installed on Visual Studio Code.
 
 ## Workshop Contents
 

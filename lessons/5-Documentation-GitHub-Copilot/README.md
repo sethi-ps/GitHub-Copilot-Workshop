@@ -72,6 +72,10 @@ When reviewing the output, consider the following:
 - For documentation, correct any errors or inaccuracies in the generated output to ensure that it accurately reflects the code's behavior and purpose.
 - Add additional information or context to the generated output to provide more comprehensive documentation.
 
+# Exercise: Adding documentation to an ASP.NET Minimal API
+
+In the [exercise](./exercise/) folder for this section, there's a ASP.NET minimal API project that displays information about dishes and their ingredients. 
+
 # Challenge: Document your Todo application using GitHub Copilot
 
 One of the most important factors of software development is being able to inform users of your software how to use it. So that super-shiny todo app that you've been building throughout the day - It's time to document it!

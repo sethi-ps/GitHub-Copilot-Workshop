@@ -73,3 +73,15 @@ We use prompts to communicate our intent to GitHub Copilot. This requires us to 
 
 
 # Challenge: Improve your code using GitHub Copilot Chat
+
+It's now time to apply what we've learnt in this lesson to your own Todo application. We've used GitHub Copilot to create some new features, and we've also generated some unit tests to ensure that our code works as expected.
+
+You're now going to use GitHub Copilot to improve our code. Again, how and what you improve is up to you, but here are some suggestions to get you started:
+
+- How secure is your code? Maybe that frontend could use some authentication? How about the backend?
+- How are you managing user input? Can you enter anything for the name of your todo tasks? Maybe that can be improved?
+- How reliable is your code? Are there any edge cases you can think of that GitHub Copilot can help you out with?
+
+**Want to win some SWAG?!!!!**
+
+- First pair/team/group to demo their work gets a prize!
