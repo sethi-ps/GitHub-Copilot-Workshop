@@ -70,7 +70,39 @@ Some prompts that can help us write more secure code:
 
 We use prompts to communicate our intent to GitHub Copilot. This requires us to have a clear understanding of what we want to achieve. Keep your prompts **concise, specific, and focused**.
 
+Let's take a look at improving the quality of our code first. In the [exercise](./exercise/) folder, we have a console application that creates bank accounts, and simulates transfers between those accounts. Take a second to review the code, and try running it a couple of times to see how it works.
 
+As developers, there's a couple of factors we should consider when working on code quality improvements:
+
+1. **Readability** - How readable is our code? Improving the readability of our code can make it easier for developers to understand.
+2. **Complexity** - Is our code too complex to be understood. Reducing the code complexity our our code makes it easier to understand, manage, and maintain.
+3. **Modularity** - Breaking down our code into smaller, reusable modules can also make the code easier to manage and maintain.
+
+What other factors can we associate with code quality? Have a think about it, and let's see how we can use these factors to help craft our prompts to GitHub Copilot.
+
+**Some tips when crafting our prompts**
+
+As we've learnt throughout this workshop, when we ask GitHub Copilot to perform a task for us, we should provide a clearly defined **context** and **intent**.
+
+The **intent** of our prompt describes the goal that we want to achieve, while the **context** tells GitHub Copilot what resources to consider. With this is mind, use the following tips when developing your prompts:
+
+- **Define the outer context that's scoped at a higher level than the code you want to update**. For example, if you want to refactor the `GenerateRandomAccountHolder()` method, you can specify the class or file that contains the method as the outer context, and the method will be your inner context.
+- Use **Chat participants** and **chat variables** to help specify context. GitHub Copilot has both `#file` and `#selection` chat variables that you can use to identify the specific code you are focused on. You can also include the full workspace (`@workspace`) when needed.
+- **The intent should be clear and specific, and specify the code quality aspect that you want to improve**. 
+
+Heading back in our `Program.cs` file, let's think about some prompts that we can use to improve the readability, maintainability, and modularity of our code. These could include:
+
+`@workspace /explain #file:Program.cs How can I improve the readability of the selected code?`
+
+`@workspace /explain #file:Program.cs #selection How can I improve the maintainability of the selected code?`
+
+`@workspace /explain #file:Program.cs How can I improve the modularity of the selected code?`
+
+`#file:Program.cs #selection How can I refactor the selected code to improve modularity?`
+
+`@workspace /explain #file:Program.cs What are some options for simplifying the selected code?`
+
+*Extra credit: Can you think of any others? Feel free to play around with some prompts to see how GitHub Copilot responds!*
 
 # Challenge: Improve your code using GitHub Copilot Chat
 
