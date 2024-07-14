@@ -14,12 +14,22 @@ In this workshop, we will cover the following areas:
 
 Please ensure that you have the following tools installed on your workstation before the workshop:
 
-- Visual Studio Code
+- Visual Studio Code or Visual Studio 2022 (*version 17.8 or later*)
+- An active subscription to GitHub Copilot
 - .NET 8
 - Node.js
 - Git
-- GitHub Copilot and GitHub Copilot Chat extensions installed on Visual Studio Code.
-- *Optional* - [VS Code Speech](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-speech) extension for VS Code.
+
+**If you want to complete the workshop with Visual Studio Code, please ensure that you have the following extensions installed**
+
+- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
+- [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat)
+- *Optional* - [VS Code Speech extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-speech).
+
+**If you want to complete the workshop with Visual Studio 2022, please ensure that you have the following extensions installed**
+
+- If you're using Visual Studio versions 17.9 or earlier, install [this GitHub Copilot extension](https://learn.microsoft.com/en-us/visualstudio/ide/visual-studio-github-copilot-install-and-states?view=vs-2022#install-github-copilot-chat).
+- If you're using Visual Studio version 17.10 or later, install [this extension](https://learn.microsoft.com/en-us/visualstudio/ide/visual-studio-github-copilot-install-and-states?view=vs-2022#get-github-copilot-for-visual-studio-2022-version-1710-or-later). It is usually installed by default with all workloads, unless you choose to exclude it during installation.
 
 ## Workshop Contents
 
