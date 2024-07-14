@@ -134,6 +134,16 @@ If your program compiles, you should see a list of books being printed to the co
 
 Congratulations! You've just used GitHub Copilot Chat features to create your library application! Granted it's not the most sophisticated application, but you've learnt how you can use GitHub Copilot to generate code for you based on inline comments within your code, prompts that you've given the inline chat feature, and also via the chat view in Visual Studio Code.
 
+*Optional, but something cool*
+
+Did you know that you can dictate prompts to GitHub Copilot Chat instead of typing them in VS Code? Using the [VS Code Speech](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-speech) extension, we can ask GitHub Copilot questions using speech recognition!
+
+Highlight one of your methods that you've just created and open an inline-chat using **Ctrl+I**. See the little microphone icon? Click on it, and ask Copilot a question! After you stop talking, GitHub Copilot will generate a response to your question for you.
+
+![](https://code.visualstudio.com/assets/docs/editor/accessibility/voice-chat.png)
+
+*When using voice for GitHub Copilot Chat, the prompt will submit automatically when you pause* - So be mindful of what you're saying!
+
 Let's take a look at some best practices for GitHub Copilot before tackling the challenge!
 
 # GitHub Copilot Best practices 

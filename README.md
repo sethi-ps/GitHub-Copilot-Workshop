@@ -19,6 +19,7 @@ Please ensure that you have the following tools installed on your workstation be
 - Node.js
 - Git
 - GitHub Copilot and GitHub Copilot Chat extensions installed on Visual Studio Code.
+- *Optional* - [VS Code Speech](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-speech) extension for VS Code.
 
 ## Workshop Contents
 
