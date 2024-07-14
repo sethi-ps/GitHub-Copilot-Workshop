@@ -190,3 +190,17 @@ With Copilot Chat, you aren't limited to just the first response. You can iterat
 
 # Challenge Time - Develop features for the Todo App using GitHub Copilot
 
+It's time for our first challenge! In the [challenge code](../../challenge-code/) folder,
+
+In this challenge, your task is to use GitHub Copilot to implement some new features for the Todo application. This is your change to be creative! Use both code line completions and GitHub Copilot Chat to implement new features, and be as creative as possible!
+
+With these challenges, there's no *right* answer - It's a chance to apply the skills you've learnt in the lesson and be a little creative in how you implement your solution. Here's some pointers for inspiration that you can use for the challenge:
+
+- Take a look at the [TodoItem](../../challenge-code/api/Todoly.Api/Todoly.Api/TodoItem.cs) model. Can you use inline code completions to expand the model? What else should be included in the model?
+- Take a look at the endpoints for the API. Is this API complete? Are there any endpoints missing? What else should be in here?
+
+Grab a friend, join a team or a group, and start thinking about how you can use Copilot to implement some new features in your Todo application!
+
+**WANT TO WIN SOME SWAG?!**
+
+First team to demo their solution gets a prize!
