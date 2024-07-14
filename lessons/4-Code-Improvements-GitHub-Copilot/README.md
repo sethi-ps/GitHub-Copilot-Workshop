@@ -104,6 +104,8 @@ Heading back in our `Program.cs` file, let's think about some prompts that we ca
 
 *Extra credit: Can you think of any others? Feel free to play around with some prompts to see how GitHub Copilot responds!*
 
+Let's use one of these prompts on the `GenerateRandomAccountHolder()` method
+
 # Challenge: Improve your code using GitHub Copilot Chat
 
 It's now time to apply what we've learnt in this lesson to your own Todo application. We've used GitHub Copilot to create some new features, and we've also generated some unit tests to ensure that our code works as expected.

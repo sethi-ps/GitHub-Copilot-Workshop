@@ -65,8 +65,6 @@ app.MapGet("/dishes/{dishId}/ingredients", async (DishesDbContext dishesDbContex
         .FirstOrDefaultAsync(d => d.Id == dishId))?.Ingredients);
 });
 
-
-
 // recreate & migrate the database on each run, for demo purposes
 using (var serviceScope = app.Services.GetService<IServiceScopeFactory>().CreateScope())
 {

@@ -74,7 +74,125 @@ When reviewing the output, consider the following:
 
 # Exercise: Adding documentation to an ASP.NET Minimal API
 
-In the [exercise](./exercise/) folder for this section, there's a ASP.NET minimal API project that displays information about dishes and their ingredients. 
+In the [exercise](./exercise/) folder for this section, there's a ASP.NET minimal API project that displays information about dishes and their ingredients. We could learn about this project by taking a look at the files, but let's use GitHub Copilot to speed up this process.
+
+Let's start by using GitHub Copilot chat to explain the project for us. Open up a Chat view in Visual Studio Code and enter the following command:
+
+```
+@workspace Explain this project
+```
+
+GitHub Copilot Chat will generate an explanation of the API project like so:
+
+*Remember that the response you see here below may be a little different to what you see!*
+
+![](./media/image1.png)
+
+You may have notice that GitHub Copilot Chat has suggested a follow-up question which you can use to ask further questions:
+
+![](./media/image2.png)
+
+GitHub Copilot Chat builds history of your conversation, which helps it to understand what you're interested in. As this chat history builds up, the AI model learns from your interactions and provides more relevant follow-up questions. With this in mind, **avoid asking GitHub Copilot random questions in your chat history!** This way, GitHub Copilot can provide more relevant suggestions.
+
+Let's use GitHub Copilot Chat to get a better understanding of a particular file. Enter the following prompt:
+
+```
+@workspace /explain #file:Program.cs
+```
+
+Take a minute to review the response in the Chat view:
+
+![](./media/image3.png)
+
+Notice that Copilot Chat has generated a detailed explanation of the `Program.cs` file, which includes the purpose of the file, the structure, and key components.
+
+With the chat view, it's important to note that **GitHub Copilot Chat maintains a history of your chat conversation!** Ask you continue to ask questions, it will refine the responses it provides.
+
+The **context** of your questions will influence the responses you get from GitHub Copilot Chat. This helps Copilot to provide more accurate and relevant responses.
+
+Now let's take a look at how we can get GitHub Copilot to explain selected lines of code. We all encounter code that's difficult to understand, so we can use GitHub Copilot to generate explanations of code that's selected.
+
+Using the `Program.cs` file, let's highlight the `app.MapGet()` method that selects a dish by its Id. We can then right-click on the selected code, select **Copilot**, and then select **Explain This** from the menu.
+
+Take a minute to review the response in the Chat view:
+
+![](./media/image4.png)
+
+Notice that GitHub Copilot has generated a detailed explanation that incudes information about the selected code lines, their purpose, and how they work.
+
+Now, let's take a look at how we can generate **inline code documentation by using GitHub Copilot Chat**. Copilot Chat can help us to document our code by generating inline code comments. Let's take a look at how we can use the Chat view to do this.
+
+With the `app.MapGet()` method in our `Program.cs` file highlighted, open up chat view again, and enter the following prompt:
+
+```
+generate inline code documentation for the selected code
+```
+
+Wait for Copilot to generate a response. It should look something like the following:
+
+![](./media/image5.png)
+
+As you can see, the response includes suggested code comments and the associated code. Sometimes this may just be a portion of your code, or all of your highlighted code. From here, we can copy+paste the code into our file, or move the comments manually ourselves.
+
+We can also use Inline chat to do this. Let's highlight the `app.MapGet(/dishes/{dishId}/ingredients")` endpoint, open up inline chat using **Ctrl+I** and enter the following prompt:
+
+```
+/doc
+```
+
+We can also use the **Generate Docs** smart action to generate inline code documentation. To do this, select another method, right-click on the selected code block, and select **Copilot**, then select **Generate Docs**.
+
+Review the response from GitHub Copilot. To accept the comments, click on **Accept** to insert the comments into your `Program.cs` file.
+
+**It's essential to review the suggested updates to your code before accepting! Take a look at the suggestion to see if there are any issues, and discard it or attempt to correct the issue before accepting any changes from GitHub Copilot!**
+
+Finally, let's take a look at how we can generate project documentation using GitHub Copilot Chat.
+
+We can generate documentation for our projects in Visual Studio Code using the Chat view and the `@workspace` participant. By using natural language, we can generate specific sections for our project documentation.
+
+In our DishesApi project, there's no `README.md` file! Let's use GitHub Copilot Chat to generate this for us.
+
+In the Chat view, enter the following prompt:
+
+```
+@workspace document this project
+```
+
+Take a moment to review the documentation generated for the API.
+
+![](./media/image6.png)
+
+We can refine the prompt further by asking GitHub Copilot to `document the project dependencies` or `document the project constraints` for a more detailed response. Let's try this by using the following prompt:
+
+```
+@workspace document the project dependencies
+```
+
+Take a minute to review the output from GitHub Copilot. In this example, GitHub Copilot has responded with a list of core dependencies for this project, along with the NuGet packages and their versions.
+
+![](./media/image7.png)
+
+Feel free to experiment with the refined prompts to generate the type of documentation that you want. This could include generating documentation on the following:
+
+- Project requirements
+- Project constraints
+- Project architecture
+- Project design
+- Project testing
+- Project deployment
+- Project summary
+
+Now, let's get GitHub Copilot to generate a `README.md` file for our Api project. To do this, we can use the following prompt:
+
+```
+@workspace generate a readme document that can be used as a repo description
+```
+
+Take a moment to review the output from GitHub Copilot. You should see the `README.md` file content that provides a high-level overview of the project, with sections that are often included in `README.md` files. 
+
+![](./media/image8.png)
+
+Have a play with the prompt to specify `README.md` sections that you use in your organization. Remember that you can use Copilot to write specific sections of a `README.md` document, instead of the whole thing.
 
 # Challenge: Document your Todo application using GitHub Copilot
 
@@ -86,6 +204,15 @@ How you document is up to you! Here are some suggestions to get you started:
 
 - That `README.md` file is looking pretty thin ☹️ How do we start the application? Do I need anything installed on my machine to run it? It'd be great if that detail was in there...
 - How readable is your code? Could it benefit from some inline comments? 
+
+Good project documentation often includes the following sections:
+
+- **Project Overview**: A high-level summary of the project, its purpose, and its goals.
+- **Project Requirements**: A list of the project's requirements, including functional and nonfunctional requirements.
+- **Project Constraints**: Any constraints that affect the project, such as time, budget, or technical constraints.
+- **Project Dependencies**: A list of the project's dependencies, including libraries, frameworks, and other components that the project relies on.
+
+Using GitHub Copilot, can you generate some documentation for your Todo application that includes these sections for you?
 
 Split up into pairs, grab a group together, come up with some ideas, and craft away!
 
