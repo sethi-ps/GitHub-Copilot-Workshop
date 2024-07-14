@@ -104,7 +104,136 @@ Heading back in our `Program.cs` file, let's think about some prompts that we ca
 
 *Extra credit: Can you think of any others? Feel free to play around with some prompts to see how GitHub Copilot responds!*
 
-Let's use one of these prompts on the `GenerateRandomAccountHolder()` method
+Let's use one of these prompts on the `GenerateRandomAccountHolder()` method. Highlight the method, open up the Chat view and enter the following prompt:
+
+```
+@workspace /explain #file:Program.cs How can I improve the readability of the selected code?
+```
+
+Take a moment to review the output from GitHub Copilot. In this example, we get some recommendations on using meaning full method names, avoiding repetition, using comments sparingly etc.
+
+![](./media/image1.png)
+
+Make changes to the code based on the output that GitHub Copilot has suggested. What changes did you make? Does the code look more readable?
+
+What about asking Copilot to improve the maintainability of our code? Let's highlight the `GenerateRandomAccountHolder()` method again, and ask the following question using the Chat view.
+
+```
+@workspace /explain #file:Program.cs How can I improve the maintainability of the selected code?
+```
+
+Review the output. As you can see from the example below, GitHub Copilot has given us some suggestions as to how to make this code more modular.
+
+![](./media/image2.png)
+
+As part of the output, you should get a revised code output that shows you how you can implement the suggestions that GitHub Copilot has made. For example, the following code block has been included in the response we got from GitHub Copilot:
+
+```csharp
+// Assuming .NET 6 or later
+public class AccountGenerator
+{
+    private static readonly string[] AccountHolderNames = {
+        "John Smith", "Maria Garcia", "Mohammed Khan", "Sophie Dubois",
+        "Liam Johnson", "Emma Martinez", "Noah Lee", "Olivia Kim",
+        "William Chen", "Ava Wang", "James Brown", "Isabella Nguyen",
+        "Benjamin Wilson", "Mia Li", "Lucas Anderson", "Charlotte Liu",
+        "Alexander Taylor", "Amelia Patel", "Daniel Garcia", "Sophia Kim"
+    };
+
+    /// <summary>
+    /// Generates a random account holder name from a predefined list.
+    /// </summary>
+    /// <returns>A randomly selected account holder name.</returns>
+    public static string GenerateRandomAccountHolder()
+    {
+        return AccountHolderNames[Random.Shared.Next(AccountHolderNames.Length)];
+    }
+}
+```
+
+Finally, let's ask GitHub Copilot how we can make our code more modular. Enter the following prompt in the Chat view:
+
+```
+@workspace /explain #file:Program.cs How can I improve the modularity of the selected code?
+```
+
+As with our previous prompts, we should get some suggestions from GitHub Copilot on how we can make our code more modular, and some suggestions on how we can implement those improvements.
+
+![](./media/image3.png)
+
+Let's turn our attention to using GitHub Copilot to improve the **reliability** and **performance** of our code.
+
+It's important to note here that suggestions from GitHub Copilot **don't always represent best practice for improving reliability and performance!** You as the developer need to use your judgement and knowledge to evaluate the suggestions that GitHub Copilot provides.
+
+**GitHub Copilot does not, and will not, replace the need for thorough code reviews and testing! (As much as we would like it to....)**
+
+With this in mind, let's think about some of the prompts that we can use to generate suggestions for improving the reliability of our code. You can use prompts to direct GitHub Copilot to generate suggestions that improve exception handling, reduce unexpected issues, and improve test coverage.
+
+Use a combination of specific and general prompts to help you identify areas that need improvement and implement the necessary changes.
+
+Here are some to get you started:
+
+`@workspace /explain #file:BankAccount.cs How can I improve exception handling the selected code?`
+
+`@workspace /explain #file:BankAccount.cs How can I reduce unexpected issues for the selected code?`
+
+`@workspace /explain #file:BankAccount.cs How can I improve unit test support for the selected code?`
+
+`@workspace /explain #file:Program.cs How can I improve performance with asynchronous tasks or methods in the selected code?`
+
+`@workspace /explain #file:Program.cs How can I improve the efficiency of algorithms or data structures for the selected code?`
+
+Let's work with the [`BankAccount.cs`](./exercise/BankAccount/BankAccount.cs) file. Highlight the code in the file, open up Chat view and then enter the following prompt:
+
+```
+@workspace /explain #file:BankAccount.cs How can I improve exception handling the selected code?
+```
+
+Review the output from GitHub Copilot. Copilot will provide some suggestions on how to improve exception handling within the `BankAccount.cs` file, and provide steps on how to implement these changes.
+
+![](./media/image4.png)
+
+After you have implemented the changes, experiment with some of the suggested prompts above. What recommendations does Copilot provide? Are there some that you can implement? Does something not look right?
+
+Now let's try a prompt that focuses on improving the performance of our code. To do this, open up the [`Program.cs`](./exercise/BankAccount/Program.cs) file, then open up the Chat view and enter the following prompt:
+
+```
+@workspace /explain #file:Program.cs How can I improve performance with asynchronous tasks or methods in the selected code?
+```
+
+GitHub Copilot should once again, provide some suggestions on how we can improve the performance of our code.
+
+![](./media/image5.png)
+
+Finally, let's see how we can use GitHub Copilot to improve our code security. Again, suggestions from GitHub Copilot **do not always represent the best practices or comprehensive solutions to develop secure code**. As developers, you still need to use your judgement and expertise to implement secure code, as well as work alongside your security teams to ensure that the code you write doesn't introduce any vulnerabilities to your organization.
+
+Think of the code security processes that exist within your organization. What comes to mind? How do code security reviews currently work in your team? How do you analyze code vulnerabilities?
+
+With these questions in mind, can we incorporate the answers to these questions within the prompts that we give to GitHub Copilot?
+
+Here's some that we could use as examples:
+
+`@workspace /explain #file:BankAccount.cs How can I implement authentication in the selected code?`
+
+`@workspace /explain #file:BankAccount.cs How can I protect sensitive data in the selected code?`
+
+`@workspace /explain #file:BankAccount.cs How can I implement logging of suspicious account activities of the selected code?`
+
+`@workspace /explain #file:Program.cs How can I improve the security of the selected code?`
+
+Let's open up the [`BankAccount.cs`](./exercise/BankAccount/BankAccount.cs) file, select all the content, open up Chat view, and enter the follow prompt:
+
+```
+@workspace /explain #file:BankAccount.cs How can I protect sensitive data in the selected code?
+```
+
+Take a minute to observe the output from GitHub Copilot. You should see some recommendations from Copilot on how you can make your code more secure, and how you can implement those suggestions with some code samples.
+
+![](./media/image6.png)
+
+Remember, the best way to secure your code depends on **your specific use case and requirements**. Copilot is there to help you, but not do the job of making your code more secure for you!
+
+Now that we know how we can use GitHub Copilot to make improvements to our code, let's apply what we've learnt to our next challenge!
 
 # Challenge: Improve your code using GitHub Copilot Chat
 
