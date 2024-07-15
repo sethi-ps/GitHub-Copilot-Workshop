@@ -177,3 +177,47 @@ Install directly from Visual Studio Marketplace: [GitHub Copilot Chat on Marketp
 3. In the Search box, enter "GitHub Copilot" or "GitHub Copilot Chat".
 4. Select the extension, and then select the **Download** button.
 5. Restart Visual Studio to complete the installation process.
+
+## Managing the state of Copilot
+
+To ensure that Copilot has been configured properly, you can manage the state of Copilot within your IDE. 
+
+### Visual Studio Code
+
+To check if Copilot is active, look for the GitHub Copilot icon in the status bar, which indicates that GitHub Copilot is active.
+
+![](https://code.visualstudio.com/assets/docs/copilot/setup/vscode-status-bar-copilot-active.png)
+
+Select the GitHub Copilot icon to open the Copilot status. The GitHub Copilot status should show **Ready**.
+
+![](https://code.visualstudio.com/assets/docs/copilot/setup/copilot-status-menu.png)
+
+### Visual Studio 2022
+
+With Visual Studio 2022 version 17.10, you should see a Copilot status icon in the upper-right corner of your IDE. *In version 17.8 and 17.9, this is at the bottom panel of Visual Studio*.
+
+**Copilot is active**
+
+If you're signed into Visual Studio with a GitHub account that has a Copilot licence, you should see the following status, along with the ability to open the Chat window:
+
+![](https://learn.microsoft.com/en-us/visualstudio/ide/media/vs-2022/visual-studio-github-copilot-install-and-states/copilot-state-active.png?view=vs-2022)
+
+**Copilot is inactive**
+
+If you're not signed into Visual Studio with a GitHub account that has an active Copilot subscription, you can select **Add GitHub Account with a Copilot Subscription** in the dropdown to sign in.
+
+![](https://learn.microsoft.com/en-us/visualstudio/ide/media/vs-2022/visual-studio-github-copilot-install-and-states/copilot-state-inactive.png?view=vs-2022)
+
+Once you're signed in, the status should update to active. If Copilot is inactive, the signed in GitHub account credentials may need to be refreshed. Select **Refresh your GitHub credentials** from the dropdown to refresh your GitHub account and sign in again.
+
+If you're still having issues, contact your IT administrator team for help.
+
+**Copilot is unavailable**
+
+If you've installed Copilot, but it's unavailable for use, it may be due to the following:
+
+- Network connectivity issues.
+- Server-side technical problems.
+- Expired service plan.
+
+To resolve these issues, select **Copilot is unreachable** in the dropdown menu to open the **Troubleshooting** page on diagnosing and resolving common network errors with GitHub Copilot.
