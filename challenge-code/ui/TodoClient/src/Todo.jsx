@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import TodoList from "./TodoList";
 
-const term = "Todo";
 
 function Todo() {
     const [data, setData] = useState([]);
@@ -14,18 +13,19 @@ function Todo() {
     const fetchTodoData = () => {
         // Simulate fetching todos from API
         const todos = [
-            { id: 1, title: "Buy milk", completed: false },
-            { id: 2, title: "Buy eggs", completed: false },
-            { id: 3, title: "Buy bread", completed: false }
+            { id: 1, name: "Buy milk", isCompleted: false },
+            { id: 2, name: "Buy eggs", isCompleted: false },
+            { id: 3, name: "Buy bread", isCompleted: false }
         ];
         setData(todos);
         setMaxId(Math.max(...todos.map(todo => todo.id)));
     };
 
-    const handleCreate = (title) => {
+    const handleCreate = (name) => {
+        console.log('handleCreate: ', name);
         const newTodo = {
             id: maxId + 1,
-            title: title,
+            name: name,
             completed: false
         };
         setData([...data, newTodo]);
@@ -48,9 +48,9 @@ function Todo() {
     };
     
     return (
-        <div>
+        <div className="container">
             <TodoList
-                name={term}
+                name={'Todo List'}
                 data={data}
                 onCreate={handleCreate} 
                 onUpdate={handleUpdate}
