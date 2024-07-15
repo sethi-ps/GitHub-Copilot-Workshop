@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Todoly.Api;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -53,6 +54,18 @@ app.MapPost("/todoitems", async (TodoItem todoItem, TodoContext db) =>
     await db.SaveChangesAsync();
 
     return Results.Created($"/todoitems/{todoItem.Id}", todoItem);
+});
+
+app.MapPut("/todoitems/{id}", async ([FromRoute]int id, TodoItem todoItem, TodoContext db) =>
+{
+    if (id != todoItem.Id)
+    {
+        return Results.BadRequest("Resource ID does not match body");
+    }
+
+    db.Update(todoItem);
+    await db.SaveChangesAsync();
+    return Results.NoContent();
 });
 
 
