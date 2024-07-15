@@ -72,6 +72,26 @@ When reviewing the output, consider the following:
 - For documentation, correct any errors or inaccuracies in the generated output to ensure that it accurately reflects the code's behavior and purpose.
 - Add additional information or context to the generated output to provide more comprehensive documentation.
 
+## Generating Pull Request Descriptions with GitHub Copilot
+
+Another form of documentation includes *pull requests descriptions*. It may not be the first thing that comes to mind when we talk about documentation, but have you ever looked at the commit history of a repository that you're working on and thought *"What was this developer even doing?"*
+
+It's easy to blame others for poor documentation, but it's easy to get stuck in the trap of not writing clear PR descriptions because you've been working on it in your head.
+
+Thankfully, we can use GitHub Copilot to draft our pull request descriptions for us!
+
+In Visual Studio code, we can open the *Source Control* view and click on the icon next to the *Message* textbox.
+
+![](./media/image9.png)
+
+GitHub will look at the changed files and generate a commit message based on those changes. It will look something like this:
+
+![](./media/image10.png)
+
+In Visual Studio 2022, this looks a little different. In the **Git Changes** view, click on the pencil icon that when you hover over it says **Add AI Generated Commit Message**:
+
+![](./media/image11.png)
+
 # Exercise: Adding documentation to an ASP.NET Minimal API
 
 In the [exercise](./exercise/) folder for this section, there's a ASP.NET minimal API project that displays information about dishes and their ingredients. We could learn about this project by taking a look at the files, but let's use GitHub Copilot to speed up this process.
@@ -223,4 +243,4 @@ We'll be asking people to demo their solutions at the end of the challenge with 
 Once the 3 entrants have demoed their solution, we'll be asking all of you to vote for the winner! In particular, we're interested in:
 
 - What prompts did you use to generate documentation for your project?
-- Did you focus on inline code documentation, or did you generate a complete `README.md` file? Would someone else be able to take your project, and run it just using the generated documentaton?
+- Did you focus on inline code documentation, or did you generate a complete `README.md` file? Would someone else be able to take your project, and run it just using the generated documentation?
