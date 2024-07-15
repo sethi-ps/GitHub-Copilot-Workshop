@@ -4,10 +4,22 @@ using Todoly.Api;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("TodoList"));
+builder.Services.AddDbContext<TodoContext>(opt => opt.UseSqlite("Data Source=todo.db"));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddCors(options =>
+     {
+         options.AddPolicy("AllowAll",
+             builder =>
+             {
+                 builder
+                 .AllowAnyOrigin() 
+                 .AllowAnyMethod()
+                 .AllowAnyHeader();
+             });
+     });
 
 var app = builder.Build();
 
@@ -18,9 +30,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors("AllowAll");
+
 app.UseHttpsRedirection();
 
 app.MapGet("/todoitems", async (TodoContext db) =>
+
     await db.TodoItems.ToListAsync());
 
 app.MapGet("/todoitems/complete", async (TodoContext db) =>
@@ -39,5 +54,15 @@ app.MapPost("/todoitems", async (TodoItem todoItem, TodoContext db) =>
 
     return Results.Created($"/todoitems/{todoItem.Id}", todoItem);
 });
+
+
+if (app.Environment.IsDevelopment())
+{
+    // initialize db on startup in development
+    using var scope = app.Services.CreateScope();
+    var db = scope.ServiceProvider.GetService<TodoContext>();
+    db?.Database.Migrate();
+}
+
 
 app.Run();

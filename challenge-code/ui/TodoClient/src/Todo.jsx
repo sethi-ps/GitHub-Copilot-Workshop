@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import TodoList from "./TodoList";
+import axios from 'axios';
+
 
 
 function Todo() {
@@ -11,14 +13,12 @@ function Todo() {
     }, []);
 
     const fetchTodoData = () => {
-        // Simulate fetching todos from API
-        const todos = [
-            { id: 1, name: "Buy milk", isCompleted: false },
-            { id: 2, name: "Buy eggs", isCompleted: false },
-            { id: 3, name: "Buy bread", isCompleted: false }
-        ];
-        setData(todos);
-        setMaxId(Math.max(...todos.map(todo => todo.id)));
+
+        axios.get('http://localhost:5144/todoitems')
+        .then((response) => {
+            setData(response.data);
+            setMaxId(Math.max(...response.data.map(todo => todo.id)));
+        });
     };
 
     const handleCreate = (name) => {
