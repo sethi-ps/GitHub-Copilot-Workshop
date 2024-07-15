@@ -13,7 +13,6 @@ function Todo() {
     }, []);
 
     const fetchTodoData = () => {
-
         axios.get('http://localhost:5144/todoitems')
         .then((response) => {
             setData(response.data);
@@ -28,23 +27,37 @@ function Todo() {
             name: name,
             completed: false
         };
-        setData([...data, newTodo]);
-        setMaxId(maxId + 1);
+
+        axios.post('http://localhost:5144/todoitems', newTodo)
+        .then((response) => {
+            setData([...data, newTodo]);
+            setMaxId(maxId + 1);
+        });
+        
     };
 
     const handleUpdate = (item) => {
-        const updatedData = data.map(todo => {
-            if (todo.id === item.id) {
-                return item;
-            }
-            return todo;
+        console.log('handleUpdate: ', item);
+        axios.put(`http://localhost:5144/todoitems/${item.id}`, item)
+        .then((response) => {
+            const updatedData = data.map(todo => {
+                if (todo.id === item.id) {
+                    return item;
+                }
+                return todo;
+            });
+            setData(updatedData);
         });
-        setData(updatedData);
+        
     };
 
     const handleDelete = (id) => {
-        const updatedData = data.filter(todo => todo.id !== id);
-        setData(updatedData);
+        axios.delete(`http://localhost:5144/todoitems/${id}`)
+        .then((response) => {
+            const updatedData = data.filter(todo => todo.id !== id);
+            setData(updatedData);
+        });
+        
     };
     
     return (

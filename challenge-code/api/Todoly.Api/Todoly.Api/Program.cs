@@ -68,6 +68,19 @@ app.MapPut("/todoitems/{id}", async ([FromRoute]int id, TodoItem todoItem, TodoC
     return Results.NoContent();
 });
 
+app.MapDelete("/todoitems/{id}", async (int id, TodoContext db) =>
+{
+    var todoItem = await db.TodoItems.FindAsync(id);
+    if (todoItem is null)
+    {
+        return Results.NotFound();
+    }
+
+    db.TodoItems.Remove(todoItem);
+    await db.SaveChangesAsync();
+    return Results.NoContent();
+});
+
 
 if (app.Environment.IsDevelopment())
 {

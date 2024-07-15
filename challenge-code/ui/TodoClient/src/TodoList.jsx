@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function TodoList({ name, data, onCreate, onUpdate, onDelete, error }) {
-    const [formData, setFormData] = useState({ id: '', name: '', isCompleted: false });
+    const [formData, setFormData] = useState({ id: '', name: '', isComplete: false });
     const [isEditing, setIsEditing] = useState(null);
 
     const handleFormChange = (event) => {
@@ -23,7 +23,7 @@ function TodoList({ name, data, onCreate, onUpdate, onDelete, error }) {
         } else {
           onCreate(formData.name);
         }
-        setFormData({ id: '', name: '', isCompleted: false });
+        setFormData({ id: '', name: '', isComplete: false });
         setIsEditing(null);
       };
 
@@ -34,13 +34,13 @@ function TodoList({ name, data, onCreate, onUpdate, onDelete, error }) {
       };
 
     const handleCancel = () => {
-        setFormData({ id: '', name: '', isCompleted: false });
+        setFormData({ id: '', name: '', isComplete: false });
         setIsEditing(null);
       };
 
     const completeItem = (item) => {
         console.log('completeItem:',item);
-        item.isCompleted = !item.isCompleted;
+        item.isComplete = !item.isComplete;
         onUpdate(item);
       };
 
@@ -53,7 +53,7 @@ function TodoList({ name, data, onCreate, onUpdate, onDelete, error }) {
             <ul className={'list-group'}>
                 {data.map(item => (
                     <li key={item.id} className="list-group-item d-flex justify-content-between align-items-start">
-                        <div><label className={item.isCompleted ? 'text-decoration-line-through' : ''}><input type="checkbox" checked={item.isCompleted} onChange={() => completeItem(item)} /> {item.name}</label>  </div> 
+                        <div><label className={item.isComplete ? 'text-decoration-line-through' : ''}><input type="checkbox" checked={item.isComplete} onChange={() => completeItem(item)} /> {item.name}</label>  </div> 
                         <div>
                             <button className="btn btn-primary" onClick={() => handleEdit(item)}>Edit</button>
                             &nbsp;
