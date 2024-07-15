@@ -126,4 +126,9 @@ Grab a friend, join a team or a group, and start thinking about how you can use 
 
 **WANT TO WIN SOME SWAG?!**
 
-- First team to demo their solution gets a prize!
+We'll be asking people to demo their solutions at the end of the challenge with a chance to win some amazing Star Wars Lego! We'll get 3 people to demo their solution, so first come, first served....
+
+Once the 3 entrants have demoed their solution, we'll be asking all of you to vote for the winner! In particular, we're interested in:
+
+- What prompts did you use to generate your unit tests?
+- What edge cases did you account for when generating your unit tests?

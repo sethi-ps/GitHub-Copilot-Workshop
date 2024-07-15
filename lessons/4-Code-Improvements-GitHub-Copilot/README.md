@@ -247,4 +247,9 @@ You're now going to use GitHub Copilot to improve our code. Again, how and what 
 
 **Want to win some SWAG?!!!!**
 
-- First pair/team/group to demo their work gets a prize!
+We'll be asking people to demo their solutions at the end of the challenge with a chance to win some amazing Star Wars Lego! We'll get 3 people to demo their solution, so first come, first served....
+
+Once the 3 entrants have demoed their solution, we'll be asking all of you to vote for the winner! In particular, we're interested in:
+
+- What prompts did you use to improve your code?
+- What did you focus on in particular? Readability? Security? Performance?

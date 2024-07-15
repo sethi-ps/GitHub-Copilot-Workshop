@@ -200,7 +200,37 @@ With Copilot Chat, you aren't limited to just the first response. You can iterat
 
 # Challenge Time - Develop features for the Todo App using GitHub Copilot
 
-It's time for our first challenge! In the [challenge code](../../challenge-code/) folder,
+It's time for our first challenge! In the [challenge code](../../challenge-code/) folder, there's a basic application that tracks Todo tasks. To see this in action, first navigate to the api folder in your terminal, and run the following command:
+
+```dotnet
+dotnet run
+```
+
+Navigate to `http://localhost:5144/swagger/index.html` and you should see the following Swagger file:
+
+![](../../challenge-code/media/image1.png)
+
+Have a play around with the endpoints, and look at the Todo schema to see how they work. 
+
+There's also a front-end application that talks to the API. Open up a new terminal, navigate to the folder where the UI code sits, and run the following commands:
+
+```bash
+npm install
+```
+
+Once the packages are installed, run the UI with the following command:
+
+```bash
+npm run dev
+```
+
+The front end application should be running at `http://localhost:3000/` and should look like this:
+
+![](../../challenge-code/media/image2.png)
+
+Again, have a play around with the UI to get an understanding of how it works.
+
+As you can see, this is a very basic application!
 
 In this challenge, your task is to use GitHub Copilot to implement some new features for the Todo application. This is your change to be creative! Use both code line completions and GitHub Copilot Chat to implement new features, and be as creative as possible!
 
@@ -208,9 +238,15 @@ With these challenges, there's no *right* answer - It's a chance to apply the sk
 
 - Take a look at the [TodoItem](../../challenge-code/api/Todoly.Api/Todoly.Api/TodoItem.cs) model. Can you use inline code completions to expand the model? What else should be included in the model?
 - Take a look at the endpoints for the API. Is this API complete? Are there any endpoints missing? What else should be in here?
+- The front end is very basic - Can you use Copilot to add your own personal branding to it?
 
 Grab a friend, join a team or a group, and start thinking about how you can use Copilot to implement some new features in your Todo application!
 
 **WANT TO WIN SOME SWAG?!**
 
-First team to demo their solution gets a prize!
+We'll be asking people to demo their solutions at the end of the challenge with a chance to win some amazing Star Wars Lego! We'll get 3 people to demo their solution, so first come, first served....
+
+Once the 3 entrants have demoed their solution, we'll be asking all of you to vote for the winner! In particular, we're interested in:
+
+- What new features you've implemented using Copilots?
+- What inline comments/chat prompts did you use to generate those features?

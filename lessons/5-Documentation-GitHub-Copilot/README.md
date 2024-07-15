@@ -218,5 +218,9 @@ Split up into pairs, grab a group together, come up with some ideas, and craft a
 
 **Want to win some SWAG?!!!!**
 
-- First pair/team/group to demo their work gets a prize!
-- First team to provide documentation that another team can use to start that project gets a prize!
+We'll be asking people to demo their solutions at the end of the challenge with a chance to win some amazing Star Wars Lego! We'll get 3 people to demo their solution, so first come, first served....
+
+Once the 3 entrants have demoed their solution, we'll be asking all of you to vote for the winner! In particular, we're interested in:
+
+- What prompts did you use to generate documentation for your project?
+- Did you focus on inline code documentation, or did you generate a complete `README.md` file? Would someone else be able to take your project, and run it just using the generated documentaton?
